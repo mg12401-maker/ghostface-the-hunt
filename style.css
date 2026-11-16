@@ -1,0 +1,100 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  font-family: monospace;
+  color: white;
+}
+
+#game {
+  width: 100%;
+  max-width: 950px;
+  margin: 15px auto;
+  position: relative;
+  border: 3px solid #641010;
+  background: #101510;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  background: #101b15;
+  image-rendering: pixelated;
+}
+
+#hud {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 5px;
+  background: #080808;
+  color: #ff3333;
+  font-size: 13px;
+  position: relative;
+  z-index: 2;
+}
+
+.screen {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  background: rgba(0,0,0,.94);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+}
+
+.screen h1 {
+  color: #e00000;
+  font-size: clamp(30px, 7vw, 55px);
+  margin: 5px;
+  text-shadow: 3px 3px black;
+}
+
+.screen h2 {
+  letter-spacing: 8px;
+  color: white;
+}
+
+.screen p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+button {
+  background: #a00000;
+  color: white;
+  border: 2px solid #ff3333;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+button:hover {
+  background: #e00000;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.instructions {
+  font-size: 12px;
+}
+
+@media(max-width: 600px) {
+  #hud {
+    font-size: 10px;
+  }
+}
